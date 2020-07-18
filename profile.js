@@ -13,13 +13,15 @@ htmlForm.onsubmit = function(event){
         "Phone " : "PHONE", //htmlForm.phone_number.value,
         "Amount " : 1000,
         "Price/kg" : "Rs271.29",
-        "Picture" : "1",
-        "Delivery Included?" : "FALSE"
+        "Picture " : "1",
+        "Delivery Included?" : "FALSE",
+        "Buy/Sell" : "Buy "
     } 
 
     items.push(newItem);
     console.log("!!!", items);
-
+    localStorage.setItem("existingData", JSON.stringify(items));
+    htmlForm.reset();
 }
 
 /*{"Name ", "Email ", "Phone ": "2997301", "Buy/Sell": "Sell", 

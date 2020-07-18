@@ -26,7 +26,7 @@ if(!localStorage.getItem('existingData')){
     buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
 }
 
-for(i=0; i<curView; i++){
+for(i=0; i<buyItems.length; i++){
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
                     <div class="card" style="width: 20vw;">
                         <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-top" alt="...">
