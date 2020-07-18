@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surplus/Deficit Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -27,7 +30,7 @@
             display: flex;
             flex-direction: row;
         }
-        button{
+        section button{
             background-color: rgb(228, 220, 220);
             font-size: large;
             padding:10px;
@@ -70,11 +73,19 @@
 <body>
     
     <header>
-        <h1>Surplus/Deficit Website</h1>
-        <h2>Create Your Profile</h2>
+        <div id="img_and_button">
+            <span id="cropcycle_img">
+                <img src="resized logo.png">
+            </span>
+
+            <span id="button">
+                <button><a href="createProfile.html">Create A Profile</a></button>
+            </span>
+        </div>        
+        
+        <h3>Create Your Profile</h3>
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="createProfile.html">Create A Profile</a></li>
             <li><a href="browseBuy.html">Buy</a></li>
             <li><a href="browseSell.html">Sell</a></li>
         </ul>
