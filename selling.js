@@ -1,10 +1,9 @@
-const htmlBuyItems = document.querySelector("#displayBuyItems");
+const htmlSellItems = document.querySelector("#displaySellItems");
 
 items = [];
-buyItems = [];
+sellItems = [];
 idx = 0
 let curView = 6;
-
 
 if(!localStorage.getItem('existingData')){
     $.getJSON( "postingData.json", function( data ) {
@@ -18,24 +17,24 @@ if(!localStorage.getItem('existingData')){
 
         items = localStorage.getItem('existingData');
         items = JSON.parse(items);
-        buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
+        sellItems = items.filter(item => item["Buy/Sell"] === "Sell");
     });
 }else{
     items = localStorage.getItem('existingData');
     items = JSON.parse(items);
-    buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
+    sellItems = items.filter(item => item["Buy/Sell"] === "Sell");
 }
 
 for(i=0; i<curView; i++){
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
                     <div class="card" style="width: 20vw;">
-                        <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-top" alt="...">
+                        <img src="Images/${sellItems[i]['Picture ']}.png" class="card-img-top" alt="...">
                         <span>
-                            <h4 class = "card-title" style = "float: left"> ${buyItems[i]["Product "]} </h4>
-                            <p style = "float: right; margin: 10px 0;" > $${buyItems[i]["Price/kg"].slice(2)}/kg </p>
+                            <h4 class = "card-title" style = "float: left"> ${sellItems[i]["Product "]} </h4>
+                            <p style = "float: right; margin: 10px 0;" > $${sellItems[i]["Price/kg"].slice(2)}/kg </p>
                         </span>
                         <div class="card-body" style = "clear: both;">
-                            <i class="fa fa-map-marker" aria-hidden="true"> ${buyItems[i]['Location ']}, Matale </i>
+                            <i class="fa fa-map-marker" aria-hidden="true"> ${sellItems[i]['Location ']}, Matale </i>
                             <button type="button" class="btn btn-info btn-lg" style = "float: right"
                             data-toggle="modal" data-target="#myModal${i}">
                                 See Details </button>
@@ -47,23 +46,23 @@ for(i=0; i<curView; i++){
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h3 class="modal-title"> ${buyItems[i]["Product "]} </h3>
-                                <p> ${buyItems[i]["Location "]}, Matale | Posted Some Date </p>
+                                <h3 class="modal-title"> ${sellItems[i]["Product "]} </h3>
+                                <p> ${sellItems[i]["Location "]}, Matale | Posted Some Date </p>
                             </div>
                             <div class="modal-body">
                                 <h4> Product Description </h4>
                                 <div class = "container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6"> ${buyItems[i]["Description "]} </div>
-                                        <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-top" alt="...">
+                                        <div class="col-md-6"> ${sellItems[i]["Description "]} </div>
+                                        <img src="Images/${sellItems[i]['Picture ']}.png" class="card-img-top" alt="...">
                                     </div>
                                 </div>
                                 <hr>
-                                <h4> Connect with Seller </h4>
+                                <h4> Connect with Buyer </h4>
                                 <div class = "container-fluid">
-                                    <p> Name: ${buyItems[i]["Name "]} </p>
-                                    <p> Phone: ${buyItems[i]["Phone "]}</p>
-                                    <p> Email: ${buyItems[i]["Email "]}</p>
+                                    <p> Name: ${sellItems[i]["Name "]} </p>
+                                    <p> Phone: ${sellItems[i]["Phone "]}</p>
+                                    <p> Email: ${sellItems[i]["Email "]}</p>
                                 </div>
                             </div>
 
@@ -78,5 +77,5 @@ for(i=0; i<curView; i++){
                     </div>
                 </li>`;
     
-    htmlBuyItems.insertAdjacentHTML('beforeend', item);
+    htmlSellItems.insertAdjacentHTML('beforeend', item);
 }

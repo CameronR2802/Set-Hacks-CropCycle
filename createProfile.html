@@ -111,39 +111,41 @@
 
     <section>
         <div class="container">
-            <h2>I am looking to....</h2>
-            <div class="profile_type">
-                <button id="buy_button">Buy a product</button>
-                <button id="sell_button">Sell a product</button>
-            </div>
-            
-            <h3>Product</h3>
-            <input id="product_type">
-            
-            <h3>Product Details</h3>
-            <input id="product_details">
-            
-            <h2>Contact Information</h2>
-            
-            <div class="info">
-                <span>
-                    <h3>Name/Organization</h3>
-                    <input id="name_organization">
-                </span>
-                <span>
-                    <h3>Phone Number</h3>
-                    <input id="phone_number"> 
-                </span>
-            </div>
-            
-            <h3>Email</h3>
-            <input id="email">
-            
-            <h3>Location</h3>
-            <input id="location">
-            
-            <button id="create_button">Create</button> 
-            
+            <form class = "form" id = "profileForm">
+                <h2>I am looking to....</h2>
+                <div class="profile_type">
+                    <button id="buy_button"> Buy a product </button>
+                    <button id="sell_button"> Sell a product </button>
+                </div>
+                
+                <h3>Product</h3>
+                <input id="product_type" name = "product_type">
+                
+                <h3>Product Details</h3>
+                <input id="product_details">
+                
+                <h2>Contact Information</h2>
+                
+                <div class="info">
+                    <span>
+                        <h3>Name/Organization</h3>
+                        <input id="name_organization" name = "name_organization">
+                    </span>
+                    <span>
+                        <h3>Phone Number</h3>
+                        <input id="phone_number" name = "phone_number" type = "tel"> 
+                    </span>
+                </div>
+                
+                <h3>Email</h3>
+                <input id="email" name = "email" type = "email">
+                
+                <h3>Location</h3>
+                <input id="location" name = "location">
+                
+                <h1> REMIND ME TO MAKE FIELDS REQUIRED </h1>
+                <button id="create_button" type = "submit">Create</button>     
+            </form>
             
         </div>
     </section>
@@ -153,6 +155,7 @@
         <a href="mailto:cameron.ritchie.02@gmail.com">Get In Contact</a>
     </footer>
 
-
+    <script src = "loadProducts.js"> </script>
+    <script src = "profile.js"> </script>
 </body>
 </html>

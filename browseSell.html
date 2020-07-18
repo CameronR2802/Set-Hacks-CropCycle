@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surplus/Deficit Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+
 <body>
-    
+
     <header>
-        <h1>Surplus/Deficit Website</h1>
-        <h2>Sell</h2>
-        <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="createProfile.html">Create A Profile</a></li>
-            <li><a href="browseBuy.html">Buy</a></li>
-            <li><a href="browseSell.html">Sell</a></li>
-            
-        </ul>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="home.html"> HOME </a>
+                </div>
+                <div class="float-right">
+                    <ul class="nav navbar-nav">
+                        <li><a href="createProfile.html">Create A Profile</a></li>
+                        <li><a href="browseBuy.html">Buy</a></li>
+                        <li><a href="browseSell.html">Sell</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1>cropcycle </h1>
+        <h2>Selling Products Near Matale</h2>
     </header>
-    
+
     <section>
-        the section
+        <div class="container">
+            <div class="row">
+                <div class = "col-8">
+                    <ul id = "displaySellItems" style = "list-style-type: none;">
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
 
     <footer>
         <a href="home.html">About Us</a>
         <a href="mailto:cameron.ritchie.02@gmail.com">Get In Contact</a>
     </footer>
-
+    
+    <script src = "selling.js"> </script>
 </body>
+
 </html>
