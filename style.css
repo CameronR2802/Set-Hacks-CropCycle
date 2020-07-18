@@ -8,7 +8,7 @@ body{
 
 /*Header*/
 header{
-    background-color: red;
+    background-color: #23a065ff;
     background-size: auto;
     padding: 20px;
 }
@@ -54,4 +54,18 @@ a:hover{
 #align-right{
     float: right;
     right: 0px;
+}
+
+#home-jumbotron{
+    margin-bottom: 0;
+    font-family: proxima-nova;
+    background-image: url(jumboimage.png);
+}
+
+#jumbotron-text{
+    color :#fcf7ed;
+}
+
+section{
+    background-color: antiquewhite;
 }
