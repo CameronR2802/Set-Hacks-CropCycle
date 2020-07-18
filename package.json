@@ -1,0 +1,19 @@
+{
+  "name": "set-hacks-surplus-deficit",
+  "version": "1.0.0",
+  "description": "A trading website.",
+  "main": "generateData.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CameronR2802/Set-Hacks-Surplus-Deficit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CameronR2802/Set-Hacks-Surplus-Deficit/issues"
+  },
+  "homepage": "https://github.com/CameronR2802/Set-Hacks-Surplus-Deficit#readme"
+}
