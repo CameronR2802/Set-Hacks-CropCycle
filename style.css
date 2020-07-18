@@ -8,12 +8,8 @@ body{
 
 /*Header*/
 header{
-<<<<<<< HEAD
     background-color:rgb(26, 148, 91);
     color: rgb(252, 247, 237);
-=======
-    background-color: #23a065ff;
->>>>>>> 94865f1cc2fd08031b06a18492728dfef4937dab
     background-size: auto;
     padding: 20px;
 }
@@ -35,7 +31,8 @@ section{
 
 /* Fotter*/
 footer{
-    background-color: blue;
+    background-color: #1e6a46ff
+    ;
     padding: 20px;
     display:flex;
     flex-direction: row;
