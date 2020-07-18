@@ -14,6 +14,27 @@ header{
     padding: 20px;
 }
 
+header button{
+    background-color: #f1c232ff;
+    border-radius: 10px;
+    width:max-content;
+    margin: 13px 0 0 0;
+}
+
+header button a{
+    color: #7f6000;
+    font-size: 20px;
+}
+
+header img{
+    width:35%;
+    text-indent: -9999px;
+}
+
+#img_and_button{
+    display: flex;
+}
+
 header ul{
     list-style: none;
     display: flex;
@@ -22,6 +43,7 @@ header ul{
 
 header ul li{
     margin: auto;
+    font-size: 20px;
 }
 
 /* Section */

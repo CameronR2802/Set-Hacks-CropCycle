@@ -1,40 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Surplus/Deficit Website</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
 
-    <style>
-        section.image_section{
+    <style>     
+        section.image_section {
             padding: 23% 0 1px 0;
             background-image: url("Field\ of\ Wheat.png");
             background-size: 100%;
         }
-        section.image_section h1{
-            font-size:xxx-large;
+
+        section.image_section h1 {
+            font-size: xxx-large;
             color: white;
             text-transform: uppercase;
             margin-left: 20px;
         }
-        section.image_section h4{
+
+        section.image_section h4 {
             color: white;
             margin-left: 20px;
         }
     </style>
 
 </head>
+
 <body>
-    
+
     <header>
-        <h2>Home</h2>
+        <div id="img_and_button">
+            <span id="cropcycle_img">
+                <img src="resized logo.png">
+            </span>
+
+            <span id="button">
+                <button><a href="createProfile.html">Create A Profile</a></button>
+            </span>
+        </div>
+
+        <h3>Home</h3>
+        
         <ul>
             <li><a href="home.html">Home</a></li>
-            <li><a href="createProfile.html">Create A Profile</a></li>
             <li><a href="browseBuy.html">Buy</a></li>
             <li><a href="browseSell.html">Sell</a></li>
         </ul>
@@ -50,9 +64,9 @@
           <p class="lead" id= "jumbotron-text">The leading platform to connect with users with surplus/deficit agriculture products.</p>
         </div>
     </div> -->
-    
+
     <section class="how_it_works">
-        <h1> 
+        <h1>
             How it works
         </h1>
     </section>
@@ -63,4 +77,5 @@
     </footer>
 
 </body>
+
 </html>
