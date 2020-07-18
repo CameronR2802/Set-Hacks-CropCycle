@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/CameronR2802/Set-Hacks-Surplus-Deficit/issues"
   },
-  "homepage": "https://github.com/CameronR2802/Set-Hacks-Surplus-Deficit#readme"
+  "homepage": "https://github.com/CameronR2802/Set-Hacks-Surplus-Deficit#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "uuid": "^8.2.0"
+  }
 }
