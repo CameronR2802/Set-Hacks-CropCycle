@@ -70,3 +70,8 @@ a:hover{
 section{
     background-color: antiquewhite;
 }
+
+.card-img-top{
+    height: 15vw;
+    width: 20vw;
+}

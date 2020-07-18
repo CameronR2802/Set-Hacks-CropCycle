@@ -1,4 +1,14 @@
 const buyItems = document.querySelector("#displayBuyItems");
+//const data = require('./postingData.json'); 
+
+$.getJSON( "postingData.json", function( data ) {
+    var items = [];
+    $.each( data, function( key, val ) {
+        $.each(val, function(key, val){
+            console.log(key, val);
+        });
+    });
+});
 
 let item = `<li class="col-lg-4">
             <div class="card" style="width: 18rem;">
