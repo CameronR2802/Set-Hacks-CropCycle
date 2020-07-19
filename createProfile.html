@@ -118,14 +118,22 @@
                     <option value="Sorghum">Sorghum</option>
                     <option value="Plantain">Plantain</option>
                 </select>
+                
+                <h3>Product Description</h3>
+                <input id="product_details">
 
                 <div id = "priceKg" style = "display : none">
                     <h3> Price/kg </h3>
                     <input id="priceId" name = "price">
                 </div>
-                
-                <h3>Product Description</h3>
-                <input id="product_details">
+
+                <div id = "priceBuy">
+                    <h3> Price Range </h3>
+                    <label for = "minPrice"> Min Price </label>
+                    <input type = "number" step = "0.01" id = "minPrice" name = "minPrice">
+                    <label for = "maxPrice"> Max Price </label>
+                    <input type = "number" step = "0.01" id = "maxPrice" name = "maxPrice">
+                </div>
                 
                 <h2>Contact Information</h2>
                 

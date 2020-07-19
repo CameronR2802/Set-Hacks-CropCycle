@@ -11,7 +11,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+    integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+    crossorigin=""></script>
     <style>
         #filter_button{
             background-color: rgb(228, 220, 220);
@@ -63,7 +68,7 @@
             
         </ul>
     </header>
-
+    
     <section>
         
         <button id="filter_button">Filter</button>
@@ -79,19 +84,24 @@
                 <button type="submit" class="btn btn-primary" style = "margin-top:10px"> Filter </button>
             </form>
         </div>
+        
+        <br/>
 
-        <button id="sortButton"> Sort By </button>
+        <button id="sortButton" style = "margin-top : 10px"> Sort By </button>
         <div class="sortDiv">
             <form id = "buySortForm">
                 <label for = "sortNone"> None </label>
                 <input type = "radio" value = "None" name = "sortRadio" id = "sortNone" style = "margin-right: 10px" />
 
-                <label for = "sortPrice"> Price </label>
+                <label for = "sortPrice"> Cheapest </label>
                 <input type = "radio" value = "Price" name = "sortRadio" id = "sortPrice" style = "margin-right: 10px" />
 
-                <label for = "sortName"> Name </label>
+                <label for = "sortName"> Alphabetically </label>
                 <input type = "radio" value = "Name" name = "sortRadio" id = "sortName" style = "margin-right: 10px" />
             
+                <label for = "sortDate"> Most Recent </label>
+                <input type = "radio" value = "Date" name = "sortRadio" id = "sortDate" style = "margin-right: 10px" />
+
                 <br/>
                 <button type="submit" class="btn btn-primary" style = "margin-top:10px"> Sort </button>
             </form>

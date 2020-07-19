@@ -14,6 +14,7 @@ if(!localStorage.getItem('existingData')){
         items = localStorage.getItem('existingData');
         items = JSON.parse(items);
     });
+    location.reload();
 }else{
     items = localStorage.getItem('existingData');
     items = JSON.parse(items);
@@ -41,7 +42,7 @@ if(storedFilters){
 
 storedSort = localStorage.getItem('storedSort');
 if (storedSort){
-    storedSort = JSON.parse(storedFilters);
+    storedSort = storedSort;
 }else{
     storedSort = "None";
 }

@@ -20,10 +20,11 @@ htmlForm.onsubmit = function(event){
         "Name " :  htmlForm.name_organization.value, 
         "Phone " : htmlForm.phone_number.value,
         "Amount " : 1000,
-        "Price/kg" : htmlForm.priceId.value,
+        "Price/kg" : htmlForm.priceId.value === '' ? "Rs120.00" : htmlForm.priceId.value,
         "Picture " : "1",
         "Delivery Included?" : "FALSE",
-        "Buy/Sell" : buyProduct ? "Buy " : "Sell"
+        "Buy/Sell" : buyProduct ? "Buy " : "Sell",
+        "PostedDate" : new Date().toISOString().slice(0, 10)
     } 
 
     items.push(newItem);
