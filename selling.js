@@ -6,7 +6,7 @@ sellItems = items.filter(item => item["Buy/Sell"] === "Sell");
 
 for(i=0; i<sellItems.length; i++){
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
-                    <div class="card" style="width: 20vw;">
+                        <div style="width: 100%; height: 60vh; padding: 0.8vw; background-color: white;">
                         <img src="Images/${sellItems[i]['Picture ']}.png" class="card-img-top" alt="...">
                         <span>
                             <h4 class = "card-title" style = "float: left"> ${sellItems[i]["Product "]} </h4>
@@ -14,7 +14,7 @@ for(i=0; i<sellItems.length; i++){
                         </span>
                         <div class="card-body" style = "clear: both;">
                             <i class="fa fa-map-marker" aria-hidden="true"> ${sellItems[i]['Location ']}, Matale </i>
-                            <button type="button" class="btn btn-info btn-lg" style = "float: right"
+                            <button type="button" class="btn btn-info btn-lg" style = "float: right; text-decoration : underline;"
                             data-toggle="modal" data-target="#myModal${i}">
                                 See Details </button>
                         </div>
@@ -33,7 +33,7 @@ for(i=0; i<sellItems.length; i++){
                                 <div class = "container-fluid">
                                     <div class="row">
                                         <div class="col-md-6"> ${sellItems[i]["Description "]} </div>
-                                        <img src="Images/${sellItems[i]['Picture ']}.png" class="card-img-top" alt="...">
+                                        <img src="Images/${sellItems[i]['Picture ']}.png" class="card-img-right" alt="...">
                                     </div>
                                 </div>
                                 <hr>

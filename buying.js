@@ -6,7 +6,7 @@ buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
 
 for(i=0; i<buyItems.length; i++){
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
-                    <div class="card" style="width: 20vw;">
+                    <div style="width: 100%; height: 60vh; padding: 0.8vw; background-color: white;">
                         <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-top" alt="...">
                         <span>
                             <h4 class = "card-title" style = "float: left"> ${buyItems[i]["Product "]} </h4>
@@ -33,7 +33,7 @@ for(i=0; i<buyItems.length; i++){
                                 <div class = "container-fluid">
                                     <div class="row">
                                         <div class="col-md-6"> ${buyItems[i]["Description "]} </div>
-                                        <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-top" alt="...">
+                                        <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-right" alt="...">
                                     </div>
                                 </div>
                                 <hr>
