@@ -11,7 +11,23 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
+    
+    <style>
+        #filter_button{
+            background-color: rgb(228, 220, 220);
+            border: none;
+            border-radius: 5px;
+            font-size: x-large;
+        }
+        .filter_div{
+            background-color: white;
+            padding: 10px;
+            margin: 5px 0 0 0;
+            border: solid;
+            border-radius: 5px;
+        }
+    </style>
+</head>
 
 <body>
 
@@ -35,6 +51,12 @@
     </header>
 
     <section>
+        
+        <button id="filter_button">Filter</button>
+        <div class="filter_div">
+            lmao idk what goes here
+        </div>
+
         <div class="container">
             <div class="row">
                 <div class = "col-8">
@@ -52,6 +74,19 @@
     
     <script src = "loadProducts.js"> </script>
     <script src = "buying.js"> </script>
+    
+    <script>
+        $(".filter_div").hide();
+        $("#filter_button").on("click", function(){
+            $(".filter_div").slideToggle(300);
+            if($(this).css("background-color") === "rgb(241, 194, 50)") {
+                $(this).css("background-color", "rgb(228, 220, 220)");
+            }
+            else {
+                $(this).css("background-color", "#f1c232ff");
+            }
+        });
+    </script>
 </body>
 
 </html>
