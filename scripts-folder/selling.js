@@ -20,7 +20,7 @@ for(i=0; i<sellItems.length; i++){
                         <img src="Images/${sellItems[i]['Product ']}.png" class="card-img-top" alt="...">
                         <span>
                             <h4 class = "card-title" style = "float: left"> ${sellItems[i]["Product "]} </h4>
-                            <p style = "float: right; margin: 10px 0;" > $${sellItems[i]["Price/kg"].slice(2)}/kg </p>
+                            <p style = "float: right; margin: 10px 0;" > ${sellItems[i]["Price/kg"]}/kg </p>
                         </span>
                         <div class="card-body" style = "clear: both;">
                             <i class="fa fa-map-marker" aria-hidden="true"> ${sellItems[i]['Location ']}, Matale </i>
