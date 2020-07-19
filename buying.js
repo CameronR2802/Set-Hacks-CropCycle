@@ -110,6 +110,6 @@ $('#buySortForm').submit(function(event){
     var radioValue = $("input[name='sortRadio']:checked").val();
     alert(radioValue);
     storedSort = radioValue;
-    localStorage.setItem('storedSort', JSON.stringify(storedSort));
+    localStorage.setItem('storedSort', storedSort);
     location.reload();
 });
