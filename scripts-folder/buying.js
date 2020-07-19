@@ -73,7 +73,7 @@ for (i = 0; i < buyItems.length; i++) {
                                     </div>
                                 </div>
                                 <hr>
-                                <h4> Connect with Seller </h4>
+                                <h4> Connect </h4>
                                 <div class = "container-fluid">
                                     <p> Name: ${buyItems[i]["Name "]} </p>
                                     <p> Phone: ${buyItems[i]["Phone "]}</p>
