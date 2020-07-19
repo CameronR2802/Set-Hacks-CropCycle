@@ -66,7 +66,8 @@ for (i = 0; i < buyItems.length; i++) {
                                             <h4 style = "text-decoration : underline"> Product Description </h4>
                                             ${buyItems[i]["Description "]} 
                                             <h4 style = "text-decoration : underline; margin-top:10px"> Product Details </h4>
-                                            <p> Price: ${buyItems[i]["Price/kg"]}  </p>
+                                            <p> Maximum price: ${buyItems[i]["Price/kg"]}  </p>
+                                            <p> Minimum price: ${buyItems[i]["minPrice"]}  </p>
                                         </div>
                                         <img src="Images/${buyItems[i]['Product ']}.png" class="card-img-right" alt="...">
                                     </div>
