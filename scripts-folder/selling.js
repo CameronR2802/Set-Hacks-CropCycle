@@ -42,7 +42,10 @@ for(i=0; i<sellItems.length; i++){
                                 <h4> Product Description </h4>
                                 <div class = "container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6"> ${sellItems[i]["Description "]} </div>
+                                        <div class="col-md-6"> ${sellItems[i]["Description "]} 
+                                        <h4 style = "text-decoration : underline; margin-top:10px"> Product Details </h4>
+                                        <p> Price: ${sellItems[i]["Price/kg"]}  </p>
+                                        </div>
                                         <img src="Images/${sellItems[i]['Product ']}.png" class="card-img-right" alt="...">
                                     </div>
                                 </div>
