@@ -1,6 +1,4 @@
 items = [];
-idx = 0
-let curView = 6;
 
 if(!localStorage.getItem('existingData')){
     $.getJSON( "postingData.json", function( data ) {

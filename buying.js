@@ -1,32 +1,10 @@
 const htmlBuyItems = document.querySelector("#displayBuyItems");
 
-items = [];
 buyItems = [];
-idx = 0
-let curView = 6;
 
+buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
 
-if(!localStorage.getItem('existingData')){
-    $.getJSON( "postingData.json", function( data ) {
-        console.log(data);
-        $.each( data, function( key, val ) {
-            items[idx] = val;
-            idx += 1;
-        });
-        
-        localStorage.setItem('existingData', JSON.stringify(items));
-
-        items = localStorage.getItem('existingData');
-        items = JSON.parse(items);
-        buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
-    });
-}else{
-    items = localStorage.getItem('existingData');
-    items = JSON.parse(items);
-    buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
-}
-
-for(i=0; i<curView; i++){
+for(i=0; i<buyItems.length; i++){
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
                     <div class="card" style="width: 20vw;">
                         <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-top" alt="...">
