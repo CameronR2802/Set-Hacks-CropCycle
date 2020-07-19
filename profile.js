@@ -1,4 +1,9 @@
 const htmlForm = document.querySelector("#profileForm");
+const buyButton = document.querySelector("#buy_button");
+const sellButton = document.querySelector("#sell_button");
+const createButton = document.querySelector("#create_button");
+
+var buyProduct = true;
 
 htmlForm.onsubmit = function(event){
     alert("Submitted");
@@ -22,7 +27,22 @@ htmlForm.onsubmit = function(event){
     console.log("!!!", items);
     localStorage.setItem("existingData", JSON.stringify(items));
     htmlForm.reset();
+    location.reload();
 }
+
+$("#buy_button").click(() => {
+    buyButton.style.backgroundColor = "#f1c232ff";
+    sellButton.style.backgroundColor = "rgb(228, 220, 220)";
+    buyProduct = true;
+    createButton.disabled = false;
+})
+
+$(sellButton).click(() => {
+    sellButton.style.backgroundColor = "#f1c232ff";
+    buyButton.style.backgroundColor = "rgb(228, 220, 220)";
+    buyProduct = false;
+    createButton.disabled = false;
+})
 
 /*{"Name ", "Email ", "Phone ": "2997301", "Buy/Sell": "Sell", 
 "Product ": "Plantain", "Description ", "Delivery Included?, 
