@@ -46,8 +46,14 @@
             border-color: #7f6000 ;
             border-radius: 2px;
         }
-        .form input{
+        .form input.hundred{
             width: 100%;
+        }
+        .half{
+            text-align: center;
+        }
+        div.half span{
+            margin: 20px;
         }
         
         #name_organization{
@@ -59,9 +65,6 @@
         div.info{
             display: flex;
             flex-direction: row;
-        }
-        div.info span{
-            margin: auto;
         }
     
         #create_button{
@@ -124,30 +127,34 @@
 
                 <div id = "priceKg" style = "display : none">
                     <h3> Price/kg </h3>
-                    <input id="priceId" name = "price">
+                    <input class="hundred" id="priceId" name = "price">
                 </div>
 
-                <div id = "priceBuy">
+                <div id = "priceBuy" class="half">
                     <h3> Price Range </h3>
-                    <label for = "minPrice"> Min Price </label>
-                    <input type = "number" step = "0.01" id = "minPrice" name = "minPrice">
-                    <label for = "maxPrice"> Max Price </label>
-                    <input type = "number" step = "0.01" id = "maxPrice" name = "maxPrice">
+                    <span>
+                        <label for = "minPrice"> Min Price </label>
+                        <input type = "number" step = "0.01" id = "minPrice" name = "minPrice">
+                    </span>
+                    <span>
+                        <label for = "maxPrice"> Max Price </label>
+                        <input type = "number" step = "0.01" id = "maxPrice" name = "maxPrice">
+                    </span>
                 </div>
                 
                 <h2>Contact Information</h2>
                 
                 <h3>Name/Organization</h3>
-                <input id="name_organization" name = "name_organization">
+                <input class="hundred" id="name_organization" name = "name_organization">
                 
                 <h3>Phone Number</h3>
-                <input id="phone_number" name = "phone_number" type = "tel"> 
+                <input class="hundred" id="phone_number" name = "phone_number" type = "tel"> 
                 
                 <h3>Email</h3>
-                <input id="email" name = "email" type = "email">
+                <input class="hundred" id="email" name = "email" type = "email">
                 
                 <h3>Location</h3>
-                <input id="location" name = "location">
+                <input class="hundred" id="location" name = "location">
                 
                 <h1> REMIND ME TO MAKE FIELDS REQUIRED </h1>
                 <button id="create_button" type = "submit" disabled = "true">Create</button>     
