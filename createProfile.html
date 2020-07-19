@@ -111,7 +111,7 @@
                 </div>
 
                 <h3> Product Type </h3>
-                <select id="product_type" name="product_type">
+                <select id="product_type" name="product_type" required>
                     <option value = ""> </option>
                     <option value="Maize">Maize</option>
                     <option value="Rice">Rice</option>
@@ -147,18 +147,21 @@
                 <h2>Contact Information</h2>
                 
                 <h3>Name/Organization</h3>
-                <input class="hundred" id="name_organization" name = "name_organization">
+                <input class="hundred" id="name_organization" 
+                name = "name_organization" required>
                 
                 <h3>Phone Number</h3>
-                <input class="hundred" id="phone_number" name = "phone_number" type = "tel"> 
+                <input class="hundred" id="phone_number" 
+                name = "phone_number" type = "tel" required> 
                 
                 <h3>Email</h3>
-                <input class="hundred" id="email" name = "email" type = "email">
+                <input class="hundred" id="email" name = "email" 
+                type = "email" required>
                 
                 <h3>Location</h3>
-                <input class="hundred" id="location" name = "location">
+                <input class="hundred" id="location" name = "location"
+                required>
                 
-                <h1> REMIND ME TO MAKE FIELDS REQUIRED </h1>
                 <button id="create_button" type = "submit" disabled = "true">Create</button>     
             </form>
             

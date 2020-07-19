@@ -29,14 +29,14 @@ htmlForm.onsubmit = function(event){
     if(!buyProduct){
         newItem['Price/kg'] = htmlForm.priceId.value === '' ? "Rs120.00" : "Rs" + htmlForm.priceId.value;
     }else{
-        var x = parseFloat(htmlForm.maxPrice.value);
+        var x = htmlForm.maxPrice.value === '' ?  10000 : parseFloat(htmlForm.maxPrice.value);
         newItem['Price/kg'] = "Rs" + x.toFixed(2);
-        var x = parseFloat(htmlForm.minPrice.value);
+        var x = htmlForm.minPrice.value === '' ?  0 : parseFloat(htmlForm.minPrice.value);
         newItem['minPrice'] = "Rs" + x.toFixed(2);
     }
 
     items.push(newItem);
-    console.log("!!!", items);
+    console.log("!!!", items.length);
 
     localStorage.setItem("existingData", JSON.stringify(items));
     htmlForm.reset();

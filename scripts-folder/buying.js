@@ -20,7 +20,7 @@ sortFunction = (a, b) => {
 }
 
 items.sort(sortFunction);
-
+console.log(items.length);
 buyItems = items.filter(item => {
     if (item["Buy/Sell"] === "Buy ") {
         itemCost = parseFloat(item['Price/kg'].slice(2))
@@ -29,6 +29,7 @@ buyItems = items.filter(item => {
         }
     }
 });
+console.log(buyItems.length);
 
 for (i = 0; i < buyItems.length; i++) {
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
@@ -118,6 +119,24 @@ $('#buySortForm').submit(function (event) {
     alert(radioValue);
     storedSort = radioValue;
     localStorage.setItem('storedSort', storedSort);
+    location.reload();
+});
+
+$('#filterClearButton').click(function(){
+    storedFilters = {};
+    storedFilters.BUY = {
+        'Price' : {
+            'minPrice' : 0,
+            'maxPrice' : 1000000
+        }
+    };
+    storedFilters.SELL = {
+        'Price' : {
+            'minPrice' : 0,
+            'maxPrice' : 1000000
+        }
+    };    
+    localStorage.setItem('storedFilters', JSON.stringify(storedFilters));
     location.reload();
 });
 
