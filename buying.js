@@ -14,7 +14,7 @@ for(i=0; i<buyItems.length; i++){
                         </span>
                         <div class="card-body" style = "clear: both;">
                             <i class="fa fa-map-marker" aria-hidden="true"> ${buyItems[i]['Location ']}, Matale </i>
-                            <button type="button" class="btn btn-info btn-lg" style = "float: right"
+                            <button type="button" class="btn btn-info btn-lg" style = "float: right; text-decoration : underline;"
                             data-toggle="modal" data-target="#myModal${i}">
                                 See Details </button>
                         </div>
