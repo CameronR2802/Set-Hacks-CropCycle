@@ -5,16 +5,17 @@ buyItems = [];
 buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
 
 for(i=0; i<buyItems.length; i++){
+    console.log(`Images/${buyItems[i]['Product ']}.png`);
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
                     <div style="width: 100%; height: 60vh; padding: 0.8vw; background-color: white;">
-                        <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-top" alt="...">
+                        <img src="Images/${buyItems[i]['Product ']}.png" class="card-img-top" alt="${buyItems[i]['Product ']}">
                         <span>
                             <h4 class = "card-title" style = "float: left"> ${buyItems[i]["Product "]} </h4>
-                            <p style = "float: right; margin: 10px 0;" > $${buyItems[i]["Price/kg"].slice(2)}/kg </p>
+                            <p style = "float: right; margin: 10px 0;" > Rs${buyItems[i]["Price/kg"].slice(2)}/kg </p>
                         </span>
                         <div class="card-body" style = "clear: both;">
                             <i class="fa fa-map-marker" aria-hidden="true"> ${buyItems[i]['Location ']}, Matale </i>
-                            <button type="button" class="btn btn-info btn-lg" style = "float: right; text-decoration : underline;"
+                            <button type="button" class="btn btn-info btn-lg" style = "float: right;"
                             data-toggle="modal" data-target="#myModal${i}">
                                 See Details </button>
                         </div>
@@ -29,11 +30,16 @@ for(i=0; i<buyItems.length; i++){
                                 <p> ${buyItems[i]["Location "]}, Matale | Posted Some Date </p>
                             </div>
                             <div class="modal-body">
-                                <h4> Product Description </h4>
+                
                                 <div class = "container-fluid">
                                     <div class="row">
-                                        <div class="col-md-6"> ${buyItems[i]["Description "]} </div>
-                                        <img src="Images/${buyItems[i]['Picture ']}.png" class="card-img-right" alt="...">
+                                        <div class="col-md-6"> 
+                                            <h4 style = "text-decoration : underline"> Product Description </h4>
+                                            ${buyItems[i]["Description "]} 
+                                            <h4 style = "text-decoration : underline; margin-top:10px"> Product Details </h4>
+                                            <p> Price: ${buyItems[i]["Price/kg"]}  </p>
+                                        </div>
+                                        <img src="Images/${buyItems[i]['Product ']}.png" class="card-img-right" alt="...">
                                     </div>
                                 </div>
                                 <hr>

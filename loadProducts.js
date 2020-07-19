@@ -1,4 +1,5 @@
 items = [];
+idx = 0;
 
 if(!localStorage.getItem('existingData')){
     $.getJSON( "postingData.json", function( data ) {
