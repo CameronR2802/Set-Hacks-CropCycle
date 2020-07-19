@@ -28,21 +28,11 @@ htmlForm.onsubmit = function(event){
 
     items.push(newItem);
     console.log("!!!", items);
-    if (imageUpload) localStorage.setItem('image', imageUpload);
+
     localStorage.setItem("existingData", JSON.stringify(items));
     htmlForm.reset();
     location.reload();
 }
-
-/*$('#productImage').on('change', () => {
-    imageFile = imageInput.files[0];
-    var reader = new FileReader();
-    reader.readAsDataURL(imageFile);
-    reader.onload = function () {
-        console.log(reader.result);
-        imageUpload = reader.result;
-    };
-});*/
 
 $("#buy_button").click(() => {
     buyButton.style.backgroundColor = "#f1c232ff";

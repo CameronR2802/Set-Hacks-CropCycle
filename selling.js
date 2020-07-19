@@ -7,7 +7,7 @@ sellItems = items.filter(item => item["Buy/Sell"] === "Sell");
 for(i=0; i<sellItems.length; i++){
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
                         <div style="width: 100%; height: 60vh; padding: 0.8vw; background-color: white;">
-                        <img src="Images/${sellItems[i]['Picture ']}.png" class="card-img-top" alt="...">
+                        <img src="Images/${sellItems[i]['Product ']}.png" class="card-img-top" alt="...">
                         <span>
                             <h4 class = "card-title" style = "float: left"> ${sellItems[i]["Product "]} </h4>
                             <p style = "float: right; margin: 10px 0;" > $${sellItems[i]["Price/kg"].slice(2)}/kg </p>
@@ -33,7 +33,7 @@ for(i=0; i<sellItems.length; i++){
                                 <div class = "container-fluid">
                                     <div class="row">
                                         <div class="col-md-6"> ${sellItems[i]["Description "]} </div>
-                                        <img src="Images/${sellItems[i]['Picture ']}.png" class="card-img-right" alt="...">
+                                        <img src="Images/${sellItems[i]['Product ']}.png" class="card-img-right" alt="...">
                                     </div>
                                 </div>
                                 <hr>
