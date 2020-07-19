@@ -25,7 +25,7 @@ header button{
 
 #profile_button{
     position: absolute;
-    left: 88%;
+    left: 85%;
 }
 
 header button a{
@@ -101,6 +101,10 @@ section{
 }
 
 .card-img-top{
-    height: 15vw;
-    width: 20vw;
+    height: 70%;
+    width: 100%;
+}
+.card-img-right{
+    height: 70%;
+    width: 50%;
 }
