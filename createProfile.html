@@ -49,9 +49,10 @@
             border-color: #7f6000 ;
             border-radius: 2px;
         }
-        #product_type, #email, #location, #product_details{
+        .form input{
             width: 100%;
         }
+        
         #name_organization{
             width: 100%;
         }
@@ -96,7 +97,7 @@
             <li><a href="browseSell.html">Sell</a></li>
         </ul>
     </header>
-    
+
     <section>
         <div class="container">
             <form class = "form" id = "profileForm">
@@ -114,16 +115,11 @@
                 
                 <h2>Contact Information</h2>
                 
-                <div class="info">
-                    <span>
-                        <h3>Name/Organization</h3>
-                        <input id="name_organization" name = "name_organization">
-                    </span>
-                    <span>
-                        <h3>Phone Number</h3>
-                        <input id="phone_number" name = "phone_number" type = "tel"> 
-                    </span>
-                </div>
+                <h3>Name/Organization</h3>
+                <input id="name_organization" name = "name_organization">
+                
+                <h3>Phone Number</h3>
+                <input id="phone_number" name = "phone_number" type = "tel"> 
                 
                 <h3>Email</h3>
                 <input id="email" name = "email" type = "email">

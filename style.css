@@ -24,8 +24,8 @@ header button{
 }
 
 #profile_button{
-    position: relative;
-    left: 270px;
+    position: absolute;
+    left: 88%;
 }
 
 header button a{

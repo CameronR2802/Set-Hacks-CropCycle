@@ -31,18 +31,28 @@
 
         section.how_it_works{
             color: #7f6000;
+            padding-bottom: 20px;
+
         }
-        .how_it_works figure.icon1 img{
-            border-radius: 50%;
-            width: 20%;
+        section.how_it_works div{
+            display: flex;
+            flex-direction: row;
+            text-align: center;
         }
-        .how_it_works figure.icon2 img{
-            border-radius: 50%;
-            width: 20%;
+        section.how_it_works figure{
+            margin:auto;
         }
-        .how_it_works figure.icon3 img{
+        .how_it_works figure img{
             border-radius: 50%;
-            width: 20%;
+            width: 100px;
+        }
+        .how_it_works figcaption{
+            width: 200px;
+        }
+        .how_it_works div.popular img{
+            width: 100%;
+            margin: 10px 0 10px 0;
+            border-radius: 15px;
         }
     </style>
 
@@ -85,19 +95,37 @@
         <h2>
             <strong>How it Works</strong>
         </h2>
+        <div class="icon_container">
+            <figure class="icon1">
+                <img src="Icons/Icon1.png">
+                <figcaption>
+                    Create postings to sell/purchase surplus crops from villages 
+                </figcaption>
+            </figure>
+            <figure class="icon2">
+                <img src="Icons/icon2.png">
+                <figcaption>
+                    Browse offers for dozens of crops from across Sri Lanka
+                </figcaption>
+            </figure>
+            <figure class="icon3">
+                <img src="Icons/icon3.png">
+                <figcaption>
+                    Connect with other users to prevent food waste
+                </figcaption>
+            </figure>
+        </div>
 
-        <figure class="icon1">
-            <img src="Icons/Icon1.png">
-            <figcaption>Figure caption 1</figcaption>
-        </figure>
-        <figure class="icon2">
-            <img src="Icons/icon2.png">
-            <figcaption>Figure caption 2</figcaption>
-        </figure>
-        <figure class="icon3">
-            <img src="Icons/icon3.png">
-            <figcaption>Figure caption 3</figcaption>
-        </figure>
+        <div class="popular offers">
+            <a href="browseSell.html">
+                <img src="Direction Images/direction1.png">
+            </a>
+        </div>
+        <div class="popular products">
+            <a href="browseBuy.html">
+                <img src="Direction Images/direction2.png">
+            </a>
+        </div>
 
     </section>
 
