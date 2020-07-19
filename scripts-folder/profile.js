@@ -15,7 +15,6 @@ htmlForm.onsubmit = function(event){
     newItem = {
         'Product ' : htmlForm.product_type.value,
         "Email " : htmlForm.email.value,
-        "Description " : htmlForm.product_details.value,
         "Description " : htmlForm.productDetails.value,
         "Location " : htmlForm.location.value,
         "Name " :  htmlForm.name_organization.value, 
