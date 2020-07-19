@@ -15,10 +15,17 @@ header{
 }
 
 header button{
+    /* position: absolute;
+    right: 200px; */
     background-color: #f1c232ff;
     border-radius: 10px;
     width:max-content;
-    margin: 13px 0 0 0;
+    margin: 35px 0 0 0;
+}
+
+#profile_button{
+    position: relative;
+    left: 270px;
 }
 
 header button a{
@@ -34,6 +41,7 @@ header img{
 #img_and_button{
     display: flex;
 }
+
 
 header ul{
     list-style: none;
@@ -51,10 +59,9 @@ section{
     padding: 20px;
 }
 
-/* Fotter*/
+/* Footer*/
 footer{
-    background-color: #1e6a46ff
-    ;
+    background-color: #1e6a46ff;
     padding: 20px;
     display:flex;
     flex-direction: row;
