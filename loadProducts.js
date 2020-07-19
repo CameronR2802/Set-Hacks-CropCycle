@@ -38,3 +38,10 @@ if(storedFilters){
         }
     };
 }
+
+storedSort = localStorage.getItem('storedSort');
+if (storedSort){
+    storedSort = JSON.parse(storedFilters);
+}else{
+    storedSort = "None";
+}

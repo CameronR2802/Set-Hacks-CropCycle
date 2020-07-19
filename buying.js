@@ -1,9 +1,21 @@
 const htmlBuyItems = document.querySelector("#displayBuyItems");
 const buyFilterForm = document.querySelector("#buyFilterForm");
+const buySortForm = document.querySelector("#buySortForm");
 
 buyItems = [];
 
 storedBuyFilters = storedFilters.BUY;
+
+sortFunction = (a, b) => {
+    if(storedSort === "None") return 0;
+    else if(storedSort === "Price"){
+        return parseFloat(a['Price/kg'].slice(2)) < parseFloat(b['Price/kg'].slice(2)) ? -1 : 1;
+    }else if(storedSort === "Name"){
+        return a['Product '] < b['Product '] ? -1 : 1;
+    }
+}
+
+items.sort(sortFunction);
 
 buyItems = items.filter(item => {
     if(item["Buy/Sell"] === "Buy "){
@@ -77,17 +89,27 @@ for(i=0; i<buyItems.length; i++){
 buyFilterForm.onsubmit = function(event){
     event.preventDefault();
     if(buyFilterForm.minPrice.value === ''){
-        storedFilters.Price.minPrice = 0;
+        storedBuyFilters.Price.minPrice = 0;
     }else{
-        storedFilters.Price.minPrice = buyFilterForm.minPrice.value;
+        storedBuyFilters.Price.minPrice = buyFilterForm.minPrice.value;
     }
 
     if(buyFilterForm.maxPrice.value === ''){
-        storedFilters.Price.maxPrice = 1000000;
+        storedBuyFilters.Price.maxPrice = 1000000;
     }else{
-        storedFilters.Price.maxPrice = buyFilterForm.maxPrice.value;
+        storedBuyFilters.Price.maxPrice = buyFilterForm.maxPrice.value;
     }   
 
+    storedFilters.BUY = storedBuyFilters
     localStorage.setItem('storedFilters', JSON.stringify(storedFilters));
     location.reload();
 };
+
+$('#buySortForm').submit(function(event){
+    event.preventDefault();
+    var radioValue = $("input[name='sortRadio']:checked").val();
+    alert(radioValue);
+    storedSort = radioValue;
+    localStorage.setItem('storedSort', JSON.stringify(storedSort));
+    location.reload();
+});

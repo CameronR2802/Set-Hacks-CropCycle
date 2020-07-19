@@ -26,6 +26,20 @@
             border: solid;
             border-radius: 5px;
         }
+
+        #sortButton{
+            background-color: rgb(228, 220, 220);
+            border: none;
+            border-radius: 5px;
+            font-size: x-large;
+        }
+        .sortDiv{
+            background-color: white;
+            padding: 10px;
+            margin: 5px 0 0 0;
+            border: solid;
+            border-radius: 5px;
+        }
     </style>
 </head>
 
@@ -62,7 +76,24 @@
                 <input type = "number" step = "0.01" id = "maxPrice" name = "maxPrice">
                 <br/>
                 
-                <button type="submit" class="btn btn-primary" style = "margin-top:10px">Primary</button>
+                <button type="submit" class="btn btn-primary" style = "margin-top:10px"> Filter </button>
+            </form>
+        </div>
+
+        <button id="sortButton"> Sort By </button>
+        <div class="sortDiv">
+            <form id = "buySortForm">
+                <label for = "sortNone"> None </label>
+                <input type = "radio" value = "None" name = "sortRadio" id = "sortNone" style = "margin-right: 10px" />
+
+                <label for = "sortPrice"> Price </label>
+                <input type = "radio" value = "Price" name = "sortRadio" id = "sortPrice" style = "margin-right: 10px" />
+
+                <label for = "sortName"> Name </label>
+                <input type = "radio" value = "Name" name = "sortRadio" id = "sortName" style = "margin-right: 10px" />
+            
+                <br/>
+                <button type="submit" class="btn btn-primary" style = "margin-top:10px"> Sort </button>
             </form>
         </div>
 
@@ -88,6 +119,17 @@
         $(".filter_div").hide();
         $("#filter_button").on("click", function(){
             $(".filter_div").slideToggle(300);
+            if($(this).css("background-color") === "rgb(241, 194, 50)") {
+                $(this).css("background-color", "rgb(228, 220, 220)");
+            }
+            else {
+                $(this).css("background-color", "#f1c232ff");
+            }
+        });
+
+        $(".sortDiv").hide();
+        $("#sortButton").on("click", function(){
+            $(".sortDiv").slideToggle(300);
             if($(this).css("background-color") === "rgb(241, 194, 50)") {
                 $(this).css("background-color", "rgb(228, 220, 220)");
             }

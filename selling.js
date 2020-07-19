@@ -6,7 +6,7 @@ sellItems = [];
 storedSellFilters = storedFilters.SELL;
 
 sellItems = items.filter(item => {
-    if(item["Buy/Sell"] === "Buy "){
+    if(item["Buy/Sell"] === "Sell"){
         itemCost = parseFloat(item['Price/kg'].slice(2))
         if(itemCost >= storedSellFilters['Price'].minPrice && itemCost <= storedSellFilters['Price'].maxPrice){
             return item;
@@ -72,16 +72,18 @@ for(i=0; i<sellItems.length; i++){
 sellFilterForm.onsubmit = function(event){
     event.preventDefault();
     if(sellFilterForm.minPrice.value === ''){
-        storedFilters.Price.minPrice = 0;
+        storedSellFilters.Price.minPrice = 0;
     }else{
-        storedFilters.Price.minPrice = sellFilterForm.minPrice.value;
+        storedSellFilters.Price.minPrice = sellFilterForm.minPrice.value;
     }
 
     if(sellFilterForm.maxPrice.value === ''){
-        storedFilters.Price.maxPrice = 1000000;
+        storedSellFilters.Price.maxPrice = 1000000;
     }else{
-        storedFilters.Price.maxPrice = sellFilterForm.maxPrice.value;
+        storedSellFilters.Price.maxPrice = sellFilterForm.maxPrice.value;
     }   
+
+    storedFilters.SELL = storedSellFilters;
 
     localStorage.setItem('storedFilters', JSON.stringify(storedFilters));
     location.reload();
