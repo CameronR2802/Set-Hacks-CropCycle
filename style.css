@@ -18,9 +18,10 @@ header button{
     /* position: absolute;
     right: 200px; */
     background-color: #f1c232ff;
-    border-radius: 10px;
+    border-radius: 5px;
     width:max-content;
     margin: 35px 0 0 0;
+    border: none;
 }
 
 #profile_button{
