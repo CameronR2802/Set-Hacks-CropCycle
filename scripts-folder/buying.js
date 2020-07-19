@@ -32,11 +32,14 @@ buyItems = items.filter(item => {
 
 for (i = 0; i < buyItems.length; i++) {
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
-                    <div style="width: 100%; height: 60vh; padding: 0.8vw; background-color: white;">
+                    <div style="width: 100%; height: 80vh; padding: 0.8vw; background-color: white;">
                         <img src="Images/${buyItems[i]['Product ']}.png" class="card-img-top" alt="${buyItems[i]['Product ']}">
                         <span>
                             <h4 class = "card-title" style = "float: left"> ${buyItems[i]["Product "]} </h4>
-                            <p style = "float: right; margin: 10px 0;" >  <span>&#8804;</span> Rs${buyItems[i]["Price/kg"].slice(2)}/kg </p>
+                            <div style = "float: right; margin: 10px 0;" >
+                                <p> max: ${buyItems[i]["Price/kg"]}/kg </p>
+                                <p> min: ${buyItems[i]["minPrice"]}/kg </p>
+                            </div>
                         </span>
                         <div class="card-body" style = "clear: both;">
                             <i class="fa fa-map-marker"> ${buyItems[i]['Location ']}, Matale </i>
