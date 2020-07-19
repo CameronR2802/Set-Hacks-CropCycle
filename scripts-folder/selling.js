@@ -50,7 +50,7 @@ for(i=0; i<sellItems.length; i++){
                                     </div>
                                 </div>
                                 <hr>
-                                <h4> Connect </h4>
+                                <h4 style = "text-decoration : underline;"> Connect </h4>
                                 <div class = "container-fluid">
                                     <p> Name: ${sellItems[i]["Name "]} </p>
                                     <p> Phone: ${sellItems[i]["Phone "]}</p>
