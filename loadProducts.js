@@ -18,3 +18,23 @@ if(!localStorage.getItem('existingData')){
     items = localStorage.getItem('existingData');
     items = JSON.parse(items);
 }
+
+storedFilters = localStorage.getItem('storedFilters');
+
+if(storedFilters){
+    storedFilters = JSON.parse(storedFilters);
+}else{
+    storedFilters = {};
+    storedFilters.BUY = {
+        'Price' : {
+            'minPrice' : 0,
+            'maxPrice' : 1000000
+        }
+    };
+    storedFilters.SELL = {
+        'Price' : {
+            'minPrice' : 0,
+            'maxPrice' : 1000000
+        }
+    };
+}

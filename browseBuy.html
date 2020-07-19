@@ -54,7 +54,16 @@
         
         <button id="filter_button">Filter</button>
         <div class="filter_div">
-            lmao idk what goes here
+            <form id = "buyFilterForm">
+                <h3> Price </h3>
+                <label for = "minPrice"> Min Price </label>
+                <input type = "number" step = "0.01" id = "minPrice" name = "minPrice">
+                <label for = "maxPrice"> Max Price </label>
+                <input type = "number" step = "0.01" id = "maxPrice" name = "maxPrice">
+                <br/>
+                
+                <button type="submit" class="btn btn-primary" style = "margin-top:10px">Primary</button>
+            </form>
         </div>
 
         <div class="container">

@@ -1,11 +1,20 @@
 const htmlBuyItems = document.querySelector("#displayBuyItems");
+const buyFilterForm = document.querySelector("#buyFilterForm");
 
 buyItems = [];
 
-buyItems = items.filter(item => item["Buy/Sell"] === "Buy ");
+storedBuyFilters = storedFilters.BUY;
+
+buyItems = items.filter(item => {
+    if(item["Buy/Sell"] === "Buy "){
+        itemCost = parseFloat(item['Price/kg'].slice(2))
+        if(itemCost >= storedBuyFilters['Price'].minPrice && itemCost <= storedBuyFilters['Price'].maxPrice){
+            return item;
+        }
+    }
+});
 
 for(i=0; i<buyItems.length; i++){
-    console.log(`Images/${buyItems[i]['Product ']}.png`);
     let item = `<li class="col-lg-4" style = "margin-top : 10px">
                     <div style="width: 100%; height: 60vh; padding: 0.8vw; background-color: white;">
                         <img src="Images/${buyItems[i]['Product ']}.png" class="card-img-top" alt="${buyItems[i]['Product ']}">
@@ -14,7 +23,7 @@ for(i=0; i<buyItems.length; i++){
                             <p style = "float: right; margin: 10px 0;" > Rs${buyItems[i]["Price/kg"].slice(2)}/kg </p>
                         </span>
                         <div class="card-body" style = "clear: both;">
-                            <i class="fa fa-map-marker" aria-hidden="true"> ${buyItems[i]['Location ']}, Matale </i>
+                            <i class="fa fa-map-marker"> ${buyItems[i]['Location ']}, Matale </i>
                             <button type="button" class="btn btn-info btn-lg" style = "float: right;"
                             data-toggle="modal" data-target="#myModal${i}">
                                 See Details </button>
@@ -64,3 +73,21 @@ for(i=0; i<buyItems.length; i++){
     
     htmlBuyItems.insertAdjacentHTML('beforeend', item);
 }
+
+buyFilterForm.onsubmit = function(event){
+    event.preventDefault();
+    if(buyFilterForm.minPrice.value === ''){
+        storedFilters.Price.minPrice = 0;
+    }else{
+        storedFilters.Price.minPrice = buyFilterForm.minPrice.value;
+    }
+
+    if(buyFilterForm.maxPrice.value === ''){
+        storedFilters.Price.maxPrice = 1000000;
+    }else{
+        storedFilters.Price.maxPrice = buyFilterForm.maxPrice.value;
+    }   
+
+    localStorage.setItem('storedFilters', JSON.stringify(storedFilters));
+    location.reload();
+};
