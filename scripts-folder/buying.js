@@ -52,7 +52,7 @@ for (i = 0; i < buyItems.length; i++) {
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <h3 class="modal-title"> ${buyItems[i]["Product "]} </h3>
-                                <p> ${buyItems[i]["Location "]}, Matale | Posted ${buyItems[i]["PostedDate"]} </p>
+                                <p> Location: ${buyItems[i]["Location "]}, Matale | Posted: ${buyItems[i]["PostedDate"]} </p>
                             </div>
                             <div class="modal-body">
                 
