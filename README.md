@@ -1,0 +1,7 @@
+# Set-Hacks-CropCycle
+A trading website. 
+According to the United Nations Food Programme, food supply chains of developing countries are majorly threatened by an inefficient distribution of resources. Concerned by the amount of food that is wasted in developing countries due to this unequal distribution, we decided to develop an accessible platform that would connect village markets based on their crop demands. Markets would be able to sell their excess crops to other villages while those facing a shortage can easily gain contact information to purchase these otherwise wasted items. 
+
+	Cropcycle allows markets to sell their surplus of common agricultural products through postings, where they can list their price per kilogram and describe the details regarding their crops. Coincidently, buyers can create postings to request products in that they experience a shortage. After creating a post, all users can browse through nearby offers on the “Find a Buyer” and “Find a Seller” pages and acquire contact information to reach out to product listers. Through this platform, Cropcycle aims to balance the quantity of available crops across the nation and ensure that food does not go to waste.
+
+	We brainstormed design drafts of our website and proceeded to prototype it using HTML. As usual, the stylings were done using CSS and Bootstrap and the interactions were implemented using JS and JQuery. The initial data and the data inputted by the user were all stored in the browser’s localstorage.  
